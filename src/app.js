@@ -4,6 +4,7 @@ import chalk from "chalk";
 import express, {json} from "express";
 
 import questionRouter from "./routes/questionRouter.js";
+import answerRouter from "./routes/answerRouter.js";
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ app.use(json());
 
 // ROTAS
 app.use(questionRouter);
+app.use(answerRouter);
 
 
 //PORTA

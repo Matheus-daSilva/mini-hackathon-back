@@ -1,4 +1,5 @@
 import db from "../db.js";
+import dayjs from "dayjs";
 
 export async function getQuestions(req, res) {
     try {
@@ -14,8 +15,14 @@ export async function getQuestions(req, res) {
 export async function postQuestion(req, res) {
     const {body} = req;
 
+    const question = {
+        ...body,
+        answers: [],
+        date: dayjs().format('DD/MM/YYYY HH:mm')
+    }
+
     try {
-        await db.collection("questions").insertOne(body);
+        await db.collection("questions").insertOne(question);
         res.sendStatus(201);
     } catch (e) {
         console.log("Erro ao postar questão\n", e);

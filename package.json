@@ -2,6 +2,7 @@
   "dependencies": {
     "chalk": "^5.0.1",
     "cors": "^2.8.5",
+    "dayjs": "^1.11.2",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "joi": "^17.6.0",
@@ -13,7 +14,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon start app.js"
+    "start": "npx nodemon start src/app.js"
   },
   "repository": {
     "type": "git",
