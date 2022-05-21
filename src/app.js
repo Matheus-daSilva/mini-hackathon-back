@@ -16,6 +16,7 @@ app.use(json());
 app.use(questionRouter);
 app.use(answerRouter);
 
+app.get('/', () => 'Seja bem vindo ao nosso projeto para o hackathon! Saiba mais em https://github.com/Matheus-daSilva/mini-hackathon-back')
 
 //PORTA
 const port = process.env.PORT || 5000;
