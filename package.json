@@ -9,9 +9,11 @@
   "name": "mini-hackathon-back",
   "version": "1.0.0",
   "main": "app.js",
+  "type": "module",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon start app.js"
   },
   "repository": {
     "type": "git",
